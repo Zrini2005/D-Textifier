@@ -50,17 +50,22 @@
         android:layout_margin="5dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true" />
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/textview"
-        android:gravity="center"
-        android:textSize="10sp"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:fontFamily="@font/font"
-        android:textColor="@color/black"
-        />
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:scrollbars="vertical" />
+    </ScrollView>
 
     <Button
         android:id="@+id/share"

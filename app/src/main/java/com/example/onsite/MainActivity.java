@@ -174,10 +174,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void processTextRecognitionResult(Text visionText) {
-        for (Text.TextBlock block : visionText.getTextBlocks()) {
-            blockText = block.getText();
+        StringBuilder detectedText = new StringBuilder(); // StringBuilder to accumulate text
+
+        if (visionText != null) {
+            for (Text.TextBlock block : visionText.getTextBlocks()) {
+                detectedText.append(block.getText()).append("\n");
+            }
+            blockText = detectedText.toString();
             textView.setText(blockText);
-            Log.d("TextRecognition", "Detected text: " + blockText);
+            Log.d("MainActivity", "Detected text: " + blockText);
+        } else {
+            Log.e("MainActivity", "Text recognition result is null");
         }
     }
 
