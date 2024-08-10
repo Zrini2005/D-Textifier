@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void processTextRecognitionResult(Text visionText) {
-        StringBuilder detectedText = new StringBuilder(); // StringBuilder to accumulate text
+        StringBuilder detectedText = new StringBuilder(); 
 
         if (visionText != null) {
             for (Text.TextBlock block : visionText.getTextBlocks()) {
